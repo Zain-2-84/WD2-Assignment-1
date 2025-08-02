@@ -1,0 +1,106 @@
+* {
+    /* background-image: url("/gitHub-user/public/images/default_github_profile_icon.png");
+    background-position: center;
+    background-size: 45%;
+    background-repeat: no-repeat; */
+    /* background-color: ; */
+}
+
+main {
+    font-size: 1.3rem;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.cardHolder {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . ."
+
+        /* 2nd row */
+        ". card ."
+
+        /* 3rd row */
+        ". . ."
+    ;
+    height: 100vh;
+    background-color: white;
+}
+
+/* .card, .card-info, .card-info__expand {
+    padding-bottom: 3rem;
+} */
+
+.card {
+    grid-area: card;
+    align-self: center;
+    justify-self: center;
+    padding: 1.5rem 2rem;
+    background-color: lightblue;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        /* 1st row */
+        "card-avatar"
+
+        /* 2nd row */
+        "card-info"
+    ;
+}
+
+.card-avatar {
+    grid-area: card-avatar;
+    background-image: url(../../../public/images/default_github_profile_icon-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 30vh;
+    /* max-height: 30vh; */
+    background-color: white;
+    border-radius: 10rem;
+    align-self: center;
+}
+
+.card-info {
+    grid-area: card-info;
+    text-align: center;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 0.3fr 0.5fr 0.3fr 0.5fr;
+    grid-template-areas: 
+        /* 1st row */
+        "."
+
+        /* 2nd row */
+        "card-info__default"
+
+        /* 3rd row */
+        "."
+
+        /* 4th row */
+        "card-info__expand"
+    ;
+}
+
+.card-info__default {
+    grid-area: card-info__default;
+    display: hidden;
+}
+
+.card-info__expand {
+    grid-area: card-info__expand;
+    display: hidden;
+}
+
+.float-left {
+    grid-area: float-left;
+    float: left;
+}
+
+.number {
+    /* display: inline-block; */
+    text-align: right;
+    font-style: italic;
+    float: right;
+}
