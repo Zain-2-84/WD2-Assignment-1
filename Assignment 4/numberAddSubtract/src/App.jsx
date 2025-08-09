@@ -25,8 +25,8 @@ function App() {
   }
 
   function decrementByFive() {
-    if (number != -1 && number < 0) {
-      return number = 0;
+    if (number != -1 || number < 0) {
+      return setNumber(0);
     }
 
     setNumber(number - 5);
@@ -34,16 +34,24 @@ function App() {
 
   return (
     <>
-      <h1>Current value: {number}</h1>
-      <button onClick={increment}>Increment</button>
+    <div className="full-Container">
+      <div className='numberAddSubtract-Container'>
+      <h1 className='heading-with-update'>Current value: {number}</h1>
 
-      <button onClick={decrement}>Decrement</button>
+      <div className="increment-decrement-buttons">
+        <button className='increment' onClick={increment}>Increment</button>
 
-      <button onClick={reset}>Reset</button>
+        <button className='decrement' onClick={decrement}>Decrement</button>
 
-      <button onClick={incrementByFive}>Increment by 5</button>
+        <button className='reset' onClick={reset}>Reset</button>
 
-      <button onClick={decrementByFive}>Decrement by 5</button>
+        <button className='incrementByFive' onClick={incrementByFive}>Increment by 5</button>
+
+        <button className='decrementByFive' onClick={decrementByFive}>Decrement by 5</button>
+      </div>
+      </div>
+
+    </div>
     </>
   )
 }

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-Container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-areas:
+        /* 1st row */
+        ". . ."
+
+        /* 2nd row */
+        ". numberAddSubtract-Container ."
+
+        /* 3rd row */
+        ". . ."
+    ;
+    height: 100vh;
+    background-color: #8d99ae;
+}
+
+/* numberAddSubtract-Container start */
+.numberAddSubtract-Container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 1fr repeat(2, 0.5fr) 1fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . ."
+
+        /* 2nd row */
+        ". heading-with-update ."
+
+        /* 3rd row */
+        ". increment-decrement-buttons ."
+
+        /* 4th row */
+        ". . ."
+    ;
+    grid-area: numberAddSubtract-Container;
+}
+
+.numberAddSubtract-Container:hover {
+    background: linear-gradient(#2b2d42, #8d99ae);
+    color: #ffecd1;
+}
+/* numberAddSubtract-Container end */
+
+.heading-with-update {
+    grid-area: heading-with-update;
+    align-self: center;
+    justify-self: center;
+}
+
+/* increment decrement buttons start */
+.increment-decrement-buttons{
+    grid-area: increment-decrement-buttons;
+    align-self: center;
+    justify-self: center;
+}
+
+.increment, .decrement, .reset, .incrementByFive, .decrementByFive {
+    padding: 1rem;
+    background-color: #faf0ca;
+    border-radius: 1rem;
+    border: none;
+    margin: 3px;
+}
+
+.increment:hover {
+    background-color: #f4d35e;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.decrement:hover {
+    background-color: #f4d35e;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.reset:hover {
+    background-color: #f4d35e;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.incrementByFive:hover {
+    background-color: #f4d35e;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.decrementByFive:hover {
+    background-color: #f4d35e;
+    cursor: pointer;
+    font-weight: 700;
+}
+/* increment decrement buttons end */
