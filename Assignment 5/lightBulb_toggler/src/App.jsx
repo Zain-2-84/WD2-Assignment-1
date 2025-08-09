@@ -19,9 +19,9 @@ function App() {
     </h1>
       <div className='lightBulb-Holder'>
         {onBulb === false ? (
-            <img src="/images/Light-bulb-off-Bg-removed.png" alt="Light bulb off" srcset=""/>
+            <img src="../images/Light-bulb-off-Bg-removed.png" alt="Light bulb off" srcset=""/>
           ) : (
-            <img src="/images/Light-bulb-on-Bg-removed.png" alt="Light bulb on" srcset="" />
+            <img src="../images/Light-bulb-on-Bg-removed.png" alt="Light bulb on" srcset="" />
           )
         }
       </div>
