@@ -25,7 +25,8 @@ function App() {
   }
 
   function decrementByFive() {
-    if (number != -1 || number < 0) {
+    // number != -1 || number < 0
+    if (number - 5 < 0) {
       return setNumber(0);
     }
 
