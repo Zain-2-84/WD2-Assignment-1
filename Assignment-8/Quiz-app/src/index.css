@@ -1,0 +1,22 @@
+/* Do NOT delete this! */
+@import "tailwindcss";
+/* Do NOT delete this! */
+
+.entire-quiz {
+    border: 1rem solid red;
+    padding: 1rem 0rem;
+    max-width: fit-content;
+    min-width: 50vw;
+    max-height: fit-content;
+    min-height: 50vh;
+}
+
+.quiz-container {
+    background-image: url(/public/images/abstract-blue-pink-gradient.avif);
+    /* background: #2A7B9B;
+    background: linear-gradient(135deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(255, 252, 173, 1) 100%); */
+}
+
+.app-container {
+    background-image: url("/public/images/Quiz-background-image.jpg");
+}
