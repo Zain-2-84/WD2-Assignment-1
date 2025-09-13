@@ -26,15 +26,21 @@ function Calisthenics () {
     // Exercises component start
     const [exercisesToDisplay, setExercisesToDisplay] = useState([]);
 
-        function getAbility(value) {
-      if (value < 0) return "wrong";
-      if (value <= 5) return "beginner";
-      if (value <= 15) return "medium";
-      if (value <= 30) return "advanced";
-      return "beyond";
-    }
+    // This will help to decide which stage the user is currently on.
+    //     function getAbility(value) {
+    //   if (value < 0) return "wrong";
+    //   if (value <= 5) return "beginner";
+    //   if (value <= 15) return "medium";
+    //   if (value <= 30) return "advanced";
+    //   return "beyond";
+    // }
 
-    
+    // const pushupAbility = getAbility(pushups);
+    // const squatAbility = getAbility(squats);
+    // const pullupAbility = getAbility(pullups);
+    // const skipAbility = getAbility(Ropeskips);
+    // This will help to decide which stage the user is currently on.
+
     function exerciseDecider (e) {
         e.preventDefault();
         // easy = 5
@@ -50,19 +56,19 @@ function Calisthenics () {
             console.log("Please don't enter negative numbers.");
             setExerciseAbility("Wrong input.");
         } 
-        else if (pushups <= getAbility() && pullups <= getAbility() && squats <= getAbility() && Ropeskips <= getAbility()) 
+        else if (pushups <= 5 || pullups <= 5 || squats <= 5 || Ropeskips <= 5) 
             {
             console.log("You're a beginner.");
             setExerciseAbility("You're a beginner.");
             setExercisesToDisplay(beginnerExercises);
         } 
-        else if (pushups <= getAbility() && pullups <= getAbility() && squats <= getAbility() && Ropeskips <= getAbility()) 
+        else if (pushups <= 15 || pullups <= 15 || squats <= 15 || Ropeskips <= 15) 
             {
             console.log("You're a Experienced.");
             setExerciseAbility("You're a Experienced.");
             setExercisesToDisplay(experiencedExercises);
         } 
-        else if (pushups <= getAbility() && pullups <= getAbility() && squats <= getAbility() && Ropeskips <= getAbility()) 
+        else if (pushups <= 30 || pullups <= 30 || squats <= 30 || Ropeskips <= 30) 
             {
             console.log("You're a Advanced.");
             setExerciseAbility("You're a Advanced.");
