@@ -1,0 +1,155 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* style={{ textAlign: "center", margin: "25vh 0", height: "100vh"}} */
+#root{
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
+  grid-template-areas: 
+    /* 1st row */
+    ". . ."
+
+    /* 2nd row */
+    ". exerciseInputForm ."
+
+    /* 3rd row */
+    ". showExerciseAbilityToUser ."
+
+    /* 4th row */
+    ". showExercisesToDisplay ."
+  ;
+}
+
+/* exercise input form start */
+.exerciseInputForm{
+  grid-area: exerciseInputForm;
+  display: grid;
+  grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1rem;
+  grid-template-areas: 
+    /* 1st row */
+    ". genderLabel genderSelect ."
+
+    /* 2nd row */
+    ". ageLabel ageInput ."
+
+    /* 3rd row */
+    ". weightLabel weightInput ."
+
+    /* 4th row */
+    ". initialPushupsLabel initialPushupsInput ."
+
+    /* 5th row */
+    ". initialSquatsLabel initialSquatsInput ."
+
+    /* 6th row */
+    ". initialPullupsLabel initialPullupsInput ."
+
+    /* 7th row */
+    ". initialRopeskipsLabel initialRopeskipsInput ."
+
+    /* 8th row */
+    ". fitnessGoalLabel fitnessGoalSelect ."
+
+    /* 9th row */
+    ". submitButton submitButton ."
+  ;
+}
+
+form {
+  text-align: center;
+  /* margin: 25vh 0; */
+  /* padding: 25vh 0; */
+}
+
+/* form input{
+  width: fit-content;
+} */
+
+/* form button {
+  width: 30%;
+} */
+
+.genderSelect{
+  grid-area: genderSelect;
+}
+
+.genderLabel{
+  grid-area: genderLabel;
+}
+
+.ageLabel{
+  grid-area: ageLabel;
+}
+
+.ageInput{
+  grid-area: ageInput;
+}
+
+.weightLabel{
+  grid-area: weightLabel;
+}
+
+.weightInput{
+  grid-area: weightInput;
+}
+
+.initialPushupsLabel{
+  grid-area: initialPushupsLabel;
+}
+
+.initialPushupsInput{
+  grid-area: initialPushupsInput;
+}
+
+.initialPullupsLabel{
+  grid-area: initialPullupsLabel;
+}
+
+.initialPullupsInput{
+  grid-area: initialPullupsInput;
+}
+
+.initialSquatsLabel{
+  grid-area: initialSquatsLabel;
+}
+
+.initialSquatsInput{
+  grid-area: initialSquatsInput;
+}
+
+.initialRopeskipsLabel{
+  grid-area: initialRopeskipsLabel;
+}
+
+.initialRopeskipsInput{
+  grid-area: initialRopeskipsInput;
+}
+
+.fitnessGoalLabel{
+  grid-area: fitnessGoalLabel;
+}
+
+.fitnessGoalSelect{
+  grid-area: fitnessGoalSelect;
+}
+
+.submitButton{
+  grid-area: submitButton;
+}
+/* exercise input form end */
+
+.showExerciseAbilityToUser{
+  grid-area: showExerciseAbilityToUser;
+  text-align: center;
+}
+
+.showExercisesToDisplay{
+  grid-area: showExercisesToDisplay;
+  text-align: center;
+}

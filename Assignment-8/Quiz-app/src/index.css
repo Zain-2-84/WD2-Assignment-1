@@ -12,11 +12,11 @@
 }
 
 .quiz-container {
-    background-image: url(/public/images/abstract-blue-pink-gradient.avif);
+    background-image: url(/images/abstract-blue-pink-gradient.avif);
     /* background: #2A7B9B;
     background: linear-gradient(135deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(255, 252, 173, 1) 100%); */
 }
 
 .app-container {
-    background-image: url("/public/images/Quiz-background-image.jpg");
+    background-image: url("/images/Quiz-background-image.jpg");
 }
