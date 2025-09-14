@@ -1,35 +1,80 @@
+@import "tailwindcss";
+* {
+ margin: 0;
+ padding: 0;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url(/public/images/gettyimages-1195437152-1024x1024.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* style={{ textAlign: "center", margin: "25vh 0", height: "100vh"}} */
 #root{
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
+  grid-template-rows: 0.3fr 0.5fr 0.1fr 0.4fr;
   grid-template-areas: 
     /* 1st row */
-    ". . ."
+    ". project-heading ."
 
     /* 2nd row */
     ". exerciseInputForm ."
 
-    /* 3rd row */
+    /* 2nd row */
     ". showExerciseAbilityToUser ."
 
-    /* 4th row */
+    /* 3rd row */
     ". showExercisesToDisplay ."
   ;
+
+  align-self: center;
 }
 
 /* exercise input form start */
 .exerciseInputForm{
   grid-area: exerciseInputForm;
   display: grid;
-  grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 0.5fr);
+  gap: 1rem;
+  grid-template-areas: 
+    /* 1st row */
+    "personal-info-fieldset"
+
+    /* 2nd row */
+    "calisthenics-input-fieldset"
+
+    /* 3rd row */
+    "submitButton"
+  ;
+}
+
+form {
+  text-align: center;
+  /* margin: 25vh 0; */
+  /* padding: 25vh 0; */
+}
+
+input, select{
+  background-color: white;
+}
+
+.personal-info-fieldset, .calisthenics-input-fieldset{
+  border: 2px solid gray;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+.personal-info-fieldset{
+  grid-area: personal-info-fieldset;
+  display: grid;
+  grid-template-columns: 0.3fr 0.5fr 1fr 0.3fr;
+  grid-template-rows: repeat(3, 0.5fr);
   gap: 1rem;
   grid-template-areas: 
     /* 1st row */
@@ -40,40 +85,40 @@ body {
 
     /* 3rd row */
     ". weightLabel weightInput ."
+    ;
+}
 
-    /* 4th row */
+.calisthenics-input-fieldset{
+  grid-area: calisthenics-input-fieldset;
+  display: grid;
+  grid-template-columns: 0.3fr 0.5fr 1fr 0.3fr;
+  grid-template-rows: repeat(6, 0.5fr);;
+  grid-template-areas: 
+    /* 1st row */
+    ". weightLabel weightInput ."
+
+    /* 2nd row */
     ". initialPushupsLabel initialPushupsInput ."
 
-    /* 5th row */
+    /* 3rd row */
     ". initialSquatsLabel initialSquatsInput ."
 
-    /* 6th row */
+    /* 4th row */
     ". initialPullupsLabel initialPullupsInput ."
 
-    /* 7th row */
+    /* 5th row */
     ". initialRopeskipsLabel initialRopeskipsInput ."
 
-    /* 8th row */
+    /* 6th row */
     ". fitnessGoalLabel fitnessGoalSelect ."
-
-    /* 9th row */
-    ". submitButton submitButton ."
   ;
 }
 
-form {
+.project-heading{
+  grid-area: project-heading;
   text-align: center;
-  /* margin: 25vh 0; */
-  /* padding: 25vh 0; */
+  align-self: center;
 }
-
-/* form input{
-  width: fit-content;
-} */
-
-/* form button {
-  width: 30%;
-} */
 
 .genderSelect{
   grid-area: genderSelect;
@@ -81,10 +126,12 @@ form {
 
 .genderLabel{
   grid-area: genderLabel;
+  align-self: center;
 }
 
 .ageLabel{
   grid-area: ageLabel;
+  align-self: center;
 }
 
 .ageInput{
@@ -93,6 +140,7 @@ form {
 
 .weightLabel{
   grid-area: weightLabel;
+  align-self: center;
 }
 
 .weightInput{
@@ -101,6 +149,7 @@ form {
 
 .initialPushupsLabel{
   grid-area: initialPushupsLabel;
+  align-self: center;
 }
 
 .initialPushupsInput{
@@ -109,6 +158,7 @@ form {
 
 .initialPullupsLabel{
   grid-area: initialPullupsLabel;
+  align-self: center;
 }
 
 .initialPullupsInput{
@@ -117,6 +167,7 @@ form {
 
 .initialSquatsLabel{
   grid-area: initialSquatsLabel;
+  align-self: center;
 }
 
 .initialSquatsInput{
@@ -125,6 +176,7 @@ form {
 
 .initialRopeskipsLabel{
   grid-area: initialRopeskipsLabel;
+  align-self: center;
 }
 
 .initialRopeskipsInput{
@@ -133,6 +185,7 @@ form {
 
 .fitnessGoalLabel{
   grid-area: fitnessGoalLabel;
+  align-self: center;
 }
 
 .fitnessGoalSelect{
@@ -141,15 +194,23 @@ form {
 
 .submitButton{
   grid-area: submitButton;
+  background-color: skyblue;
+}
+
+.submitButton:hover{
+  background-color: white;
+  border: 3px solid skyblue;
 }
 /* exercise input form end */
 
 .showExerciseAbilityToUser{
   grid-area: showExerciseAbilityToUser;
   text-align: center;
+  align-self: center;
 }
 
 .showExercisesToDisplay{
   grid-area: showExercisesToDisplay;
   text-align: center;
+  align-self: center;
 }

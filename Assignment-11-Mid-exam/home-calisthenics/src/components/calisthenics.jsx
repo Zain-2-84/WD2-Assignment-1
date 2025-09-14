@@ -26,26 +26,15 @@ function Calisthenics () {
     // Exercises component start
     const [exercisesToDisplay, setExercisesToDisplay] = useState([]);
 
-    // This will help to decide which stage the user is currently on.
-    //     function getAbility(value) {
-    //   if (value < 0) return "wrong";
-    //   if (value <= 5) return "beginner";
-    //   if (value <= 15) return "medium";
-    //   if (value <= 30) return "advanced";
-    //   return "beyond";
-    // }
-
-    // const pushupAbility = getAbility(pushups);
-    // const squatAbility = getAbility(squats);
-    // const pullupAbility = getAbility(pullups);
-    // const skipAbility = getAbility(Ropeskips);
-    // This will help to decide which stage the user is currently on.
+    const [submitted, setSubmitted] = useState(false);
 
     function exerciseDecider (e) {
         e.preventDefault();
-        // easy = 5
-        // medium = 15
-        // advanced = 30
+        setSubmitted(true);
+
+        const easy = 5
+        const medium = 15
+        const advanced = 30
 
         const pushups = Number(initialPushups);
         const pullups = Number(initialPullups);
@@ -56,19 +45,19 @@ function Calisthenics () {
             console.log("Please don't enter negative numbers.");
             setExerciseAbility("Wrong input.");
         } 
-        else if (pushups <= 5 || pullups <= 5 || squats <= 5 || Ropeskips <= 5) 
+        else if (pushups <= easy || pullups <= easy || squats <= easy || Ropeskips <= easy) 
             {
             console.log("You're a beginner.");
             setExerciseAbility("You're a beginner.");
             setExercisesToDisplay(beginnerExercises);
         } 
-        else if (pushups <= 15 || pullups <= 15 || squats <= 15 || Ropeskips <= 15) 
+        else if (pushups <= medium || pullups <= medium || squats <= medium || Ropeskips <= medium) 
             {
             console.log("You're a Experienced.");
             setExerciseAbility("You're a Experienced.");
             setExercisesToDisplay(experiencedExercises);
         } 
-        else if (pushups <= 30 || pullups <= 30 || squats <= 30 || Ropeskips <= 30) 
+        else if (pushups <= advanced || pullups <= advanced || squats <= advanced || Ropeskips <= advanced) 
             {
             console.log("You're a Advanced.");
             setExerciseAbility("You're a Advanced.");
@@ -80,132 +69,146 @@ function Calisthenics () {
     return (
         <>
             {/* Mention which function you want to call at onSubmit = {}. */}
+            <h1 className="project-heading text-4xl dark:text-white bg-white m-5">Home Calisthenics.</h1>
             <form onSubmit={exerciseDecider} className="exerciseInputForm" id="exerciseInputFormId">
-                <label 
+                <fieldset className="personal-info-fieldset  bg-sky-100/50">
+                    <legend htmlFor="personal-info-fieldset">
+                      <div class="inline-flex items-center">
+                        <span class="size-2 inline-block bg-gray-500 rounded-full m-2"></span>
+                        <span class="text-gray-600 bg-white">Personal Information:</span>
+                        <span class="size-2 inline-block bg-gray-500 rounded-full m-2"></span>
+                      </div>
+                    </legend>
+                    {/*  */}
+
+                    <label 
                     className="genderLabel"
-                    htmlFor="gender"
-                >
-                    Gender:
-                </label>
-                <select
-                    className="genderSelect"
-                    value={gender}
-                    onChange={ (e) => setGender(e.target.value) }
-                    name="genderSelect"
-                    id="genderSelectId"
-                    required
-                >
-                    Select gender:
-                    <option disabled value="Choose one">Choose one</option>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                </select>
-                {/* <label className="genderLabel" htmlFor="gender">Gender: </label>
-                <input 
-                    value={gender}
-                    onChange={ (e) => setGender(e.target.value) }
-                    //name="gender"
-                    type="text"
-                    required
-                    placeholder="Female or Male."
-                    className="genderInput"
-                    id="genderInputId"
-                /> */}
-                <br /><br />
+                    htmlFor="genderSelectId"
+                    >
+                        Gender:
+                    </label>
+                    <select
+                        className="genderSelect border-4 border-sky-500/10 border-b-sky-500"
+                        value={gender}
+                        onChange={ (e) => setGender(e.target.value) }
+                        name="genderSelect"
+                        id="genderSelectId"
+                        required
+                    >
+                        Select gender:
+                        <option disabled value="Choose one">Choose one</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                    {/* <br /><br /> */}
 
-                <label className="ageLabel" htmlFor="age">Age: </label>
-                <input 
-                    value={age}
-                    onChange={ (e) => setAge(e.target.value) }
-                    //name="age"
-                    type="number"
-                    required
-                    className="ageInput"
-                    id="ageInputId"
-                />
-                <br /><br />
+                    <label className="ageLabel" htmlFor="ageInputId">Age: </label>
+                    <input 
+                        value={age}
+                        onChange={ (e) => setAge(e.target.value) }
+                        //name="age"
+                        type="number"
+                        required
+                        className="ageInput border-4 border-sky-500/10 border-b-sky-500"
+                        id="ageInputId"
+                    />
+                    {/* <br /><br /> */}
 
-                <label className="weightLabel" htmlFor="weight">Weight: </label>
-                <input 
-                    value={weight}
-                    onChange={ (e) => setWeight(e.target.value) }
-                    //name="weight"
-                    type="number"
-                    required
-                    placeholder="Write in Kgs."
-                    className="weightInput"
-                    id="weightInputId"
-                />
-                <br /><br />
+                    <label className="weightLabel" htmlFor="weightInputId">Weight: </label>
+                    <input 
+                        value={weight}
+                        onChange={ (e) => setWeight(e.target.value) }
+                        //name="weight"
+                        type="number"
+                        required
+                        placeholder="Write in Kgs."
+                        className="weightInput border-4 border-sky-500/10 border-b-sky-500"
+                        id="weightInputId"
+                    />
+                </fieldset>
+                
+                {/* <br /><br /> */}
+                <fieldset className="calisthenics-input-fieldset  bg-sky-100/50">
+                    <legend htmlFor="personal-info-fieldset">
+                        <div class="inline-flex items-center">
+                          <span class="size-2 inline-block bg-gray-500 rounded-full m-2"></span>
+                          <span class="text-gray-600 bg-white">Your current exercise ability:</span>
+                          <span class="size-2 inline-block bg-gray-500 rounded-full m-2"></span>
+                        </div>
+                    </legend>
 
-                <label className="initialPushupsLabel" htmlFor="initialPushups">Initial pushups: </label>
-                <input 
-                    value={initialPushups}
-                    onChange={ (e) => setInitialPushups(e.target.value) }
-                    //name="initialPushups"
-                    type="number"
-                    required
-                    placeholder="Focus on quality, not quantity."
-                    className="initialPushupsInput"
-                    id="initialPushupsInputId"
-                />
-                <br /><br />
+                        <label className="initialPushupsLabel" htmlFor="initialPushupsInputId">Initial pushups: </label>
+                    <input 
+                        value={initialPushups}
+                        onChange={ (e) => setInitialPushups(e.target.value) }
+                        //name="initialPushups"
+                        type="number"
+                        required
+                        placeholder="Focus on quality, not quantity."
+                        className="initialPushupsInput border-4 border-sky-500/10 border-b-sky-500"
+                        id="initialPushupsInputId"
+                    />
+                    {/* <br /><br /> */}
 
-                <label className="initialSquatsLabel" htmlFor="initialSquats">Initial squats: </label>
-                <input 
-                    value={initialSquats}
-                    onChange={ (e) => setInitialSquats(e.target.value) }
-                    //name="initialSquats"
-                    type="number"
-                    required
-                    placeholder="Focus on quality, not quantity."
-                    className="initialSquatsInput"
-                    id="initialSquatsInputId"
-                />
-                <br /><br />
+                    <label className="initialSquatsLabel" htmlFor="initialSquatsInputId">Initial squats: </label>
+                    <input 
+                        value={initialSquats}
+                        onChange={ (e) => setInitialSquats(e.target.value) }
+                        //name="initialSquats"
+                        type="number"
+                        required
+                        placeholder="Focus on quality, not quantity."
+                        className="initialSquatsInput border-4 border-sky-500/10 border-b-sky-500"
+                        id="initialSquatsInputId"
+                    />
+                    {/* <br /><br /> */}
 
-                <label className="initialPullupsLabel" htmlFor="initialPullups">Initial pullups: </label>
-                <input 
-                    value={initialPullups}
-                    onChange={ (e) => setInitialPullups(e.target.value) }
-                    //name="initialPullups"
-                    type="number"
-                    required
-                    placeholder="Focus on quality, not quantity."
-                    className="initialPullupsInput"
-                    id="initialPullupsInputId"
-                />
-                <br /><br />
+                    <label className="initialPullupsLabel" htmlFor="initialPullupsInputId">Initial pullups: </label>
+                    <input 
+                        value={initialPullups}
+                        onChange={ (e) => setInitialPullups(e.target.value) }
+                        //name="initialPullups"
+                        type="number"
+                        required
+                        placeholder="Focus on quality, not quantity."
+                        className="initialPullupsInput border-4 border-sky-500/10 border-b-sky-500"
+                        id="initialPullupsInputId"
+                    />
+                    {/* <br /><br /> */}
 
-                <label className="initialRopeskipsLabel" htmlFor="initialRopeskips">Initial Rope skips: </label>
-                <input 
-                    value={initialRopeskips}
-                    onChange={ (e) => setInitialRopeskips(e.target.value) }
-                    //name="initialRopeskips"
-                    type="number"
-                    required
-                    placeholder="Focus on quality, not quantity."
-                    className="initialRopeskipsInput"
-                    id="initialRopeskipsInputId"
-                />
-                <br /><br />
+                    <label className="initialRopeskipsLabel" htmlFor="initialRopeskipsInputId">Initial Rope skips: </label>
+                    <input 
+                        value={initialRopeskips}
+                        onChange={ (e) => setInitialRopeskips(e.target.value) }
+                        //name="initialRopeskips"
+                        type="number"
+                        required
+                        placeholder="Focus on quality, not quantity."
+                        className="initialRopeskipsInput border-4 border-sky-500/10 border-b-sky-500"
+                        id="initialRopeskipsInputId"
+                    />
+                    {/* <br /><br /> */}
 
-                <label className="fitnessGoalLabel" htmlFor="fitnessGoal">Choose Fitness goal: </label>
-                <select className="fitnessGoalSelect" name="fitnessGoal" id="fitnessGoalId"
-                value={fitnessGoal}
-                onChange={(e) => setFitnessGoal(e.target.value)}
-                required
-                >
-                    <option value="weightLoss">Weight loss</option>
-                    <option value="strengthGain">Strength gain</option>
-                    <option value="both">Both</option>
-                </select>
-                <br /><br />
+                    <label className="fitnessGoalLabel" htmlFor="fitnessGoalId">Choose Fitness goal: </label>
+                    <select className="fitnessGoalSelect border-4 border-sky-500/10 border-b-sky-500" name="fitnessGoal" id="fitnessGoalId"
+                    value={fitnessGoal}
+                    onChange={(e) => setFitnessGoal(e.target.value)}
+                    required
+                    >
+                        <option value="weightLoss">Weight loss</option>
+                        <option value="strengthGain">Strength gain</option>
+                        <option value="both">Both</option>
+                    </select>
+                </fieldset>
+                
+                {/* <br /><br /> */}
 
                 <button type="submit" className="submitButton">Submit</button>
             </form>
-
-            {exerciseAbility && <p className="showExerciseAbilityToUser">{ exerciseAbility }</p>}
+ 
+            <h3 className="showExerciseAbilityToUser text-2xl dark:text-white  bg-sky-100/50">
+                { submitted ? exerciseAbility : "Fill the form above to see the results here." }
+            </h3>
 
             <div className="showExercisesToDisplay">
                 {exercisesToDisplay.map(item => (
