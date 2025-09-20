@@ -1,0 +1,164 @@
+.home-page {
+    /* height: 100vh; */
+  color: white;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 
+    /* 1st row */
+    "home-section"
+
+    /* 2nd row */
+    "FAQs-section"
+
+    /* 3rd row */
+    "muscle-gain-fat-loss-section"
+
+    /* 4th row */
+    "nutrition-advice-section"
+  ;
+}
+
+.home-section, .FAQs-section, .muscle-gain-fat-loss-section, .nutrition-advice-section{
+    height: 100vh;
+}
+
+.home-section {
+    grid-area: home-section;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 0.3fr;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-areas: 
+        ". . ."
+        ". home-intro-div ."
+        ". . .";
+    text-align: center;
+}
+
+.home-intro-div{
+    grid-area: home-intro-div;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+}
+
+.home-intro-button{
+    padding: 0 0.5rem;
+    font-size: large;
+    letter-spacing: 0.2rem;
+}
+
+/* FAQs-section start */
+.FAQs-section {
+    grid-area: FAQs-section;
+    background: url(/images/gradients/FAQ-section-bg-light-white.jpg) no-repeat center/cover;
+    display: grid;
+    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+        ". . . ."
+        ". FAQs-text FAQs-image ."
+        ". . . .";
+    gap: 1rem;
+}
+
+.FAQs-section h1, .muscle-gain-fat-loss-section h1, .nutrition-advice-section h1 {
+    line-height: 4rem;
+    letter-spacing: 0.3rem;
+    /* text-align: center; */
+}
+
+.FAQs-section p, .muscle-gain-fat-loss-section p, .nutrition-advice-section p {
+    line-height: 2.5rem;
+}
+
+.FAQs-section ul {
+    margin-top: 2rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.FAQs-text {
+    grid-area: FAQs-text;
+    align-self: center;
+    color: black;
+}
+
+.FAQs-image{
+    grid-area: FAQs-image;
+    background: url(/images/pullups/skinny-man-struggling-one-pullup.jpg) center/cover no-repeat;
+}
+/* FAQs-section end
+
+/* muscle-gain-fat-loss-section start */
+.muscle-gain-fat-loss-section{
+    grid-area: muscle-gain-fat-loss-section;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . . ."
+
+        /* 2nd row */
+        ". muscle-gain-fat-loss-image muscle-gain-fat-loss-text ."
+
+        /* 3rd row */
+        ". . . ."
+    ;
+    gap: 1rem;
+    background: url(/images/gradients/Red-gradient-top-right-bg.png) center/cover no-repeat;
+}
+
+.muscle-gain-fat-loss-image{
+    grid-area: muscle-gain-fat-loss-image;
+    background: url(/images/Background-images/muscle-gain-fat-loss-section-bg.jpg) center/cover no-repeat;
+}
+
+.muscle-gain-fat-loss-text{
+    grid-area: muscle-gain-fat-loss-text;
+    align-self: center;
+}
+
+.muscle-gain-fat-loss-text ul, .nutrition-advice-text ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+    line-height: 1.7rem;
+}
+/* muscle-gain-fat-loss-section end */
+
+/* nutrition-advice-section start */
+.nutrition-advice-section{
+    grid-area: nutrition-advice-section;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . . ."
+
+        /* 2nd row */
+        ". nutrition-advice-text nutrition-advice-image ."
+
+        /* 3rd row */
+        ". . . ."
+    ;
+    gap: 1rem;
+    background: url(/images/gradients/Real-gradient.jpg) center/cover no-repeat;
+}
+
+.nutrition-advice-text{
+    grid-area: nutrition-advice-text;
+    align-self: center;
+    color: black;
+}
+
+.nutrition-advice-image{
+    grid-area: nutrition-advice-image;
+    background: url(/images/oats-on-the-table.jpg) center/cover no-repeat;
+}
+/* nutrition-advice-section end */

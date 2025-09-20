@@ -1,0 +1,55 @@
+.planner-page{
+  background: url(/images/gradients/Gradient-for-calisthenicsPlanner-3.png) center/cover no-repeat;
+
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 0.2fr 1fr 0.1fr 0.5fr;
+  grid-template-areas: 
+    /* 1st row */
+    ". project-heading ."
+
+    /* 2nd row */
+    ". exerciseInputForm ."
+
+    /* 3rd row */
+    ". showExerciseAbilityToUser ."
+
+    /* 4th row */
+    ". showExercisesToDisplay ."
+  ;
+  align-items: center;
+}
+
+.project-heading{
+  grid-area: project-heading;
+  text-align: center;
+  align-self: center;
+  font-size: 8rem;
+  /* background: url(/images/logo/brand-logo.jpg) center/cover no-repeat;
+  height: 50vh; */
+  /* I'll add the logo elsewhere. */
+  align-self: center;
+}
+
+.exerciseInputForm{
+  grid-area: exerciseInputForm;
+  align-self: center;
+}
+
+.showExerciseAbilityToUser{
+  grid-area: showExerciseAbilityToUser;
+  align-self: center;
+}
+
+.showExercisesToDisplay{
+  grid-area: showExercisesToDisplay;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.exercise-img{
+  /* width: 25vw; */
+  margin: 1rem auto;
+}

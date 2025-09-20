@@ -1,0 +1,58 @@
+.FAQs-page{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . ."
+
+        /* 2nd row */
+        ". FAQs-accordian ."
+
+        /* 3rd row */
+        ". . ."
+    ;
+    height: 100vh;
+}
+
+.FAQs-accordian{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr repeat(4, 1fr) 0.3fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . ."
+
+        /* 2nd row */
+        ". FAQs-one ."
+
+        /* 3rd row */
+        ". FAQs-one-answer ."
+
+        /* 4th row */
+        ". FAQs-two ."
+
+        /* 5th row */
+        ". FAQs-two-answer ."
+
+        /* 6th row */
+        ". . ."
+    ;
+    grid-area: FAQs-accordian;
+}
+
+.FAQs-one{
+    grid-area: FAQs-one;
+}
+
+.FAQs-one-answer{
+    grid-area: FAQs-one-answer;
+}
+
+.FAQs-two{
+    grid-area: FAQs-two;
+}
+
+.FAQs-two-answer{
+    grid-area: FAQs-two-answer;
+}

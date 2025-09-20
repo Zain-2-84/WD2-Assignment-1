@@ -8,39 +8,112 @@ body {
   padding: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: url(/public/images/gettyimages-1195437152-1024x1024.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow-x: hidden;
 }
 
 /* style={{ textAlign: "center", margin: "25vh 0", height: "100vh"}} */
 #root{
   display: grid;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.3fr 0.5fr 0.1fr 0.4fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr; /*navbar is auto & main is 1fr*/
   grid-template-areas: 
     /* 1st row */
-    ". project-heading ."
+    "navbar"
 
     /* 2nd row */
-    ". exerciseInputForm ."
-
-    /* 2nd row */
-    ". showExerciseAbilityToUser ."
-
-    /* 3rd row */
-    ". showExercisesToDisplay ."
+    "main"
   ;
 
+  min-height: 100vh;
   align-self: center;
 }
+
+/* navbar start */
+.navbar{
+  grid-area: navbar;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background-color: rgb(0 0 0 / 50%);
+  background: url(/images/gradients/navbar-bg.png) center/cover no-repeat;
+  height: 4rem;
+}
+
+.navbar li a{
+  background-color: skyblue;
+  padding: 0.5vh 1.5vw;
+}
+
+.navbar li a:hover{
+  border: 0.3rem solid #FFFFFF;
+  /* background-color: transparent; */
+  /* color: white; */
+  /* font-weight: 600;
+  padding: 0.5vw 1.5vw; */
+}
+
+/* .navbar:hover{
+  background: linear-gradient(#FF7F50, #FFE5B4);
+} */
+
+ul{
+  display: grid;
+  /* grid-template-rows: 0.1fr; */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: 
+    /* 1st row */
+    "navbar-home navbar-calisthenicsPlanner navbar-FAQs navbar-muscleGainFatLoss navbar-nutritionAdvice"
+  ;
+  /* justify-content: center; */
+}
+
+.navbar-home{
+  grid-area: navbar-home;
+  justify-self: center;
+  align-self: center;
+  /* border: 5px solid white; */
+}
+
+.navbar-calisthenicsPlanner{
+  grid-area: navbar-calisthenicsPlanner;
+  justify-self: center;
+  align-self: center;
+  /* border: 5px solid white; */
+}
+
+.navbar-FAQs{
+  grid-area: navbar-FAQs;
+  justify-self: center;
+  align-self: center;
+  /* border: 5px solid white; */
+}
+
+.navbar-muscleGainFatLoss{
+  grid-area: navbar-muscleGainFatLoss;
+  justify-self: center;
+  align-self: center;
+  /* border: 5px solid white; */
+}
+
+.navbar-nutritionAdvice{
+  grid-area: navbar-nutritionAdvice;
+  justify-self: center;
+  align-self: center;
+  /* border: 5px solid white; */
+}
+
+/* .navbar-home, .navbar-calisthenicsPlanner, .navbar-FAQs, .navbar-muscleGainFatLoss, .navbar-nutritionAdvice {
+  font-weight: 100;
+} */
+/* navbar end */
 
 /* exercise input form start */
 .exerciseInputForm{
   grid-area: exerciseInputForm;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 0.5fr) 0.4fr;
   gap: 1rem;
   grid-template-areas: 
     /* 1st row */
@@ -52,6 +125,7 @@ body {
     /* 3rd row */
     "submitButton"
   ;
+  align-self: center;
 }
 
 form {
@@ -62,6 +136,11 @@ form {
 
 input, select{
   background-color: white;
+}
+
+label{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
 }
 
 .personal-info-fieldset, .calisthenics-input-fieldset{
@@ -112,12 +191,6 @@ input, select{
     /* 6th row */
     ". fitnessGoalLabel fitnessGoalSelect ."
   ;
-}
-
-.project-heading{
-  grid-area: project-heading;
-  text-align: center;
-  align-self: center;
 }
 
 .genderSelect{
@@ -199,7 +272,7 @@ input, select{
 
 .submitButton:hover{
   background-color: white;
-  border: 3px solid skyblue;
+  border: 7px outset skyblue;
 }
 /* exercise input form end */
 
