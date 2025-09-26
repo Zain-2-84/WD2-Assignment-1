@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./styles/BuildAndBurn.css"
+import "./styles/buildAndBurn.css"
 
 export default function BuildAndBurn() {
     return (
