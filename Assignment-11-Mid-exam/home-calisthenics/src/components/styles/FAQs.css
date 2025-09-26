@@ -1,10 +1,10 @@
 .FAQs-page{
     display: grid;
     grid-template-columns: 0.2fr 1fr 0.2fr;
-    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.3fr 1fr 0.2fr;
     grid-template-areas: 
         /* 1st row */
-        ". . ."
+        ". FAQs-heading ."
 
         /* 2nd row */
         ". FAQs-accordian ."
@@ -13,12 +13,18 @@
         ". . ."
     ;
     height: 100vh;
+    background: url(/images/gradients/grabient-FAQs-page-bg.png) center/cover no-repeat;
+}
+
+.FAQs-heading{
+    grid-area: FAQs-heading;
+    align-self: center;
 }
 
 .FAQs-accordian{
     display: grid;
-    grid-template-columns: 0.3fr 1fr 0.3fr;
-    grid-template-rows: 0.3fr repeat(4, 1fr) 0.3fr;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.3fr repeat(8, auto) 0.3fr;
     grid-template-areas: 
         /* 1st row */
         ". . ."
@@ -32,14 +38,38 @@
         /* 4th row */
         ". FAQs-two ."
 
-        /* 5th row */
+        /* 6th row */
         ". FAQs-two-answer ."
 
-        /* 6th row */
+        /* 7th row */
+        ". FAQs-three ."
+
+        /* 8th row */
+        ". FAQs-three-answer ."
+
+        /* 9th row */
+        ". FAQs-four ."
+
+        /* 10th row */
+        ". FAQs-four-answer ."
+
+        /* 11th row */
         ". . ."
     ;
     grid-area: FAQs-accordian;
+    margin: 0.5rem 0;
 }
+
+/* ALl FAQs-answers start */
+.FAQs-one-answer, .FAQs-two-answer, .FAQs-three-answer, .FAQs-four-answer{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.FAQs-one, .FAQs-two, .FAQs-three, .FAQs-four{
+    margin-top: 0.5rem;
+}
+/* ALl FAQs-answers end */
 
 .FAQs-one{
     grid-area: FAQs-one;
@@ -55,4 +85,20 @@
 
 .FAQs-two-answer{
     grid-area: FAQs-two-answer;
+}
+
+.FAQs-three{
+    grid-area: FAQs-three;
+}
+
+.FAQs-three-answer{
+    grid-area: FAQs-three-answer;
+}
+
+.FAQs-four{
+    grid-area: FAQs-four;
+}
+
+.FAQs-four-answer{
+    grid-area: FAQs-four-answer;
 }

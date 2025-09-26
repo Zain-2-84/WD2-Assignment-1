@@ -8,13 +8,13 @@ export default function Navbar () {
                     <NavLink to="/components/home">Home</NavLink>
                 </li>
                 <li className="navbar-calisthenicsPlanner">
-                    <NavLink to="/components/calisthenicsPlanner">Calisthenics Planner</NavLink>
+                    <NavLink to="/components/calisthenicsPlanner">Workout Planner</NavLink>
                 </li>
                 <li className="navbar-FAQs">
                     <NavLink to="/components/FAQs">FAQs</NavLink>
                 </li>
-                <li className="navbar-muscleGainFatLoss">
-                    <NavLink to="/components/muscleGainFatLoss">Muscle Gain & Fat Loss</NavLink>
+                <li className="navbar-BuildAndBurn">
+                    <NavLink to="/components/BuildAndBurn">Build & Burn</NavLink>
                 </li>
                 <li className="navbar-nutritionAdvice">
                     <NavLink to="/components/nutritionAdvice">Nutrition Advice</NavLink>

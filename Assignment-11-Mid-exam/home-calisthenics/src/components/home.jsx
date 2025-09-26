@@ -39,8 +39,8 @@ export default function Home() {
             <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">FAQ's about <span class="text-blue-600 dark:text-blue-500">Calisthenics</span>.</h1>
             <p class="mb-3 text-lg text-green-700 font-bold md:text-xl dark:text-gray-400">In this section, we'll discuss all the misconceptions and realities about Calisthenics.</p>
             <ul>
-              <li>It is harder than gym because you use your whole body weight.</li>
-              <li>It Focuses on muscle building.</li>
+              <li>It is harder than gym.</li>
+              <li>It focuses on muscle building.</li>
               <li>Depend on momentum rather than motivation.</li>
             </ul>
           </div>
@@ -51,14 +51,14 @@ export default function Home() {
         </section>
         {/* FAQs section end */}
 
-      {/* muscle-gain-fat-loss start */}
-      <section className="muscle-gain-fat-loss-section">
-        <div className="muscle-gain-fat-loss-image">
+      {/* build-and-burn start */}
+      <section className="build-and-burn-section">
+        <div className="build-and-burn-image">
 
         </div>
 
-        <div className="muscle-gain-fat-loss-text">
-          <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white"><span class="text-blue-800 dark:text-blue-500">Muscle</span> gain & <span class="text-blue-800 dark:text-blue-500">fat</span> loss.</h1>
+        <div className="build-and-burn-text">
+          <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white"><span class="text-blue-800 dark:text-blue-500">Build</span> muscle & <span class="text-blue-800 dark:text-blue-500">burn</span> fat.</h1>
 
           <p class="mb-3 text-lg text-teal-200 font-bold md:text-xl dark:text-gray-400">Calisthenics builds muscle like the gym. But it needs more attention to detail and proper execution during training and resting.</p>
 
@@ -69,7 +69,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      {/* muscle-gain-fat-loss end */}
+      {/* build-and-burn end */}
 
       {/* nutrition advice start */}
       <section className="nutrition-advice-section">

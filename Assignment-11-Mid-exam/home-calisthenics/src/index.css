@@ -46,9 +46,8 @@ body {
 }
 
 .navbar li a:hover{
-  border: 0.3rem solid #FFFFFF;
-  /* background-color: transparent; */
-  /* color: white; */
+  background-color: white;
+  /* font-weight: 600; */
   /* font-weight: 600;
   padding: 0.5vw 1.5vw; */
 }
@@ -60,11 +59,12 @@ body {
 ul{
   display: grid;
   /* grid-template-rows: 0.1fr; */
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, auto);
   grid-template-areas: 
     /* 1st row */
-    "navbar-home navbar-calisthenicsPlanner navbar-FAQs navbar-muscleGainFatLoss navbar-nutritionAdvice"
+    "navbar-home navbar-calisthenicsPlanner navbar-FAQs navbar-BuildAndBurn navbar-nutritionAdvice"
   ;
+  gap: 1rem;
   /* justify-content: center; */
 }
 
@@ -89,8 +89,8 @@ ul{
   /* border: 5px solid white; */
 }
 
-.navbar-muscleGainFatLoss{
-  grid-area: navbar-muscleGainFatLoss;
+.navbar-BuildAndBurn{
+  grid-area: navbar-BuildAndBurn;
   justify-self: center;
   align-self: center;
   /* border: 5px solid white; */
@@ -103,7 +103,7 @@ ul{
   /* border: 5px solid white; */
 }
 
-/* .navbar-home, .navbar-calisthenicsPlanner, .navbar-FAQs, .navbar-muscleGainFatLoss, .navbar-nutritionAdvice {
+/* .navbar-home, .navbar-calisthenicsPlanner, .navbar-FAQs, .navbar-BuildAndBurn, .navbar-nutritionAdvice {
   font-weight: 100;
 } */
 /* navbar end */

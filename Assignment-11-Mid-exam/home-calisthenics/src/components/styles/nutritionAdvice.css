@@ -1,0 +1,97 @@
+.nutrition-advice-page{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    /* grid-template-rows: auto 1fr repeat(2, auto); */
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        /* 1st row */
+        ". nutrition-advice-heading ."
+
+        /* 2nd row */
+        ". nutrition-advice-title-image ."
+
+        /* 3rd row */
+        ". nutrition-advice-USPs ."
+
+        /* 4th row */
+        ". nutrition-advice-foods ."
+    ;
+    /* height: 100vh; */
+    background: url(/images/gradients/grabient-Nutrition-advice-bg.png) center/cover no-repeat;
+}
+
+.nutrition-advice-heading{
+    grid-area: nutrition-advice-heading;
+    /* margin: 0 0 -5.5rem 0; */
+}
+
+.nutrition-advice-title-image{
+    grid-area: nutrition-advice-title-image;
+    background: url(/images/Background-images/Nutrition-Advice-title-image.png) center/contain no-repeat;
+    height: 100vh;
+}
+
+.nutrition-advice-USPs{
+    grid-area: nutrition-advice-USPs;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        /* 1st row */
+        "nutrition-advice-USPs-heading"
+
+        /* 2nd row */
+        "USPs-ul"
+    ;
+}
+
+.nutrition-advice-USPs-heading{
+    grid-area: nutrition-advice-USPs-heading;
+}
+
+.USPs-ul{
+    grid-area: USPs-ul;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        /* 1st row */
+        "USPs-li-1 USPs-li-2"
+
+        /* 2nd row */
+        "USPs-li-3 USPs-li-4"
+    ;
+}
+
+.USPs-li-1{
+    grid-area: USPs-li-1;
+}
+
+.USPs-li-2{
+    grid-area: USPs-li-2;
+}
+
+.USPs-li-3{
+    grid-area: USPs-li-3;
+}
+
+.USPs-li-4{
+    grid-area: USPs-li-4;
+}
+
+.circle{
+    position: relative;
+    clip-path: circle(22%);
+    height: 30vh;
+    background-color: red;
+    /* background-size: 1rem; */
+}
+
+.circle-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+}

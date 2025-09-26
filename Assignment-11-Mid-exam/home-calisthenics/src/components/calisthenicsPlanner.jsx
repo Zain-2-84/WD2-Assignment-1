@@ -70,7 +70,7 @@ function CalisthenicsPlanner () {
         <div className="planner-page">
             {/* Mention which function you want to call at onSubmit = {}. */}
 
-                <h1 className="project-heading text-4xl dark:text-white m-5">Calisthenics Planner.</h1>
+                <h1 className="project-heading text-4xl dark:text-white m-5">Workout Planner.</h1>
                 <form onSubmit={exerciseDecider} className="exerciseInputForm" id="exerciseInputFormId">
                     <fieldset className="personal-info-fieldset  bg-sky-100/50">
                         <legend htmlFor="personal-info-fieldset">

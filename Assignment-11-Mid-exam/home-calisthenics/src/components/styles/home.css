@@ -12,14 +12,14 @@
     "FAQs-section"
 
     /* 3rd row */
-    "muscle-gain-fat-loss-section"
+    "build-and-burn-section"
 
     /* 4th row */
     "nutrition-advice-section"
   ;
 }
 
-.home-section, .FAQs-section, .muscle-gain-fat-loss-section, .nutrition-advice-section{
+.home-section, .FAQs-section, .build-and-burn-section, .nutrition-advice-section{
     height: 100vh;
 }
 
@@ -63,13 +63,13 @@
     gap: 1rem;
 }
 
-.FAQs-section h1, .muscle-gain-fat-loss-section h1, .nutrition-advice-section h1 {
+.FAQs-section h1, .build-and-burn-section h1, .nutrition-advice-section h1 {
     line-height: 4rem;
     letter-spacing: 0.3rem;
     /* text-align: center; */
 }
 
-.FAQs-section p, .muscle-gain-fat-loss-section p, .nutrition-advice-section p {
+.FAQs-section p, .build-and-burn-section p, .nutrition-advice-section p {
     line-height: 2.5rem;
 }
 
@@ -92,9 +92,9 @@
 }
 /* FAQs-section end
 
-/* muscle-gain-fat-loss-section start */
-.muscle-gain-fat-loss-section{
-    grid-area: muscle-gain-fat-loss-section;
+/* build-and-burn-section start */
+.build-and-burn-section{
+    grid-area: build-and-burn-section;
     display: grid;
     grid-template-rows: 0.2fr 1fr 0.2fr;
     grid-template-columns: 0.2fr repeat(2, 1fr) 0.2fr;
@@ -103,7 +103,7 @@
         ". . . ."
 
         /* 2nd row */
-        ". muscle-gain-fat-loss-image muscle-gain-fat-loss-text ."
+        ". build-and-burn-image build-and-burn-text ."
 
         /* 3rd row */
         ". . . ."
@@ -112,24 +112,24 @@
     background: url(/images/gradients/Red-gradient-top-right-bg.png) center/cover no-repeat;
 }
 
-.muscle-gain-fat-loss-image{
-    grid-area: muscle-gain-fat-loss-image;
-    background: url(/images/Background-images/muscle-gain-fat-loss-section-bg.jpg) center/cover no-repeat;
+.build-and-burn-image{
+    grid-area: build-and-burn-image;
+    background: url(/images/Background-images/build-and-burn-section-bg.jpg) center/cover no-repeat;
 }
 
-.muscle-gain-fat-loss-text{
-    grid-area: muscle-gain-fat-loss-text;
+.build-and-burn-text{
+    grid-area: build-and-burn-text;
     align-self: center;
 }
 
-.muscle-gain-fat-loss-text ul, .nutrition-advice-text ul{
+.build-and-burn-text ul, .nutrition-advice-text ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding-top: 1rem;
     line-height: 1.7rem;
 }
-/* muscle-gain-fat-loss-section end */
+/* build-and-burn-section end */
 
 /* nutrition-advice-section start */
 .nutrition-advice-section{
