@@ -7,7 +7,7 @@ function Card () {
             <div className="card">
                 <div className="card-header"></div>
                 <div className="card-avatar">
-                    <img src="../public/images/default_github_profile_icon" alt="" srcset="" />
+                    <img src="/images/default_github_profile_icon" alt="" srcset="" />
                 </div>
                 <div className="card-info">
                     <div className="card-info__default">
