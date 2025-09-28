@@ -156,11 +156,11 @@ let newLastFruit = fruits_Q13.push("kiwi");
 console.log(newLastFruit);
 
 // Question 15
-let removedLastFruit = fruits.pop();
+let removedLastFruit = fruits_Q13.pop();
 console.log(removedLastFruit);
 
 // Question 16
-let isBananaPresent = fruits.includes("Banana", 0);
+let isBananaPresent = fruits_Q13.includes("Banana", 0);
 console.log(isBananaPresent);
 
 // Question 17
