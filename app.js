@@ -174,7 +174,7 @@ function multiply(numbers_Q17) {
   return result;
 }
 
-console.log(multiply(numbers));
+console.log(multiply(numbers_Q17));
 
 // Question 18
 let ages_Q18 = [12, 34, 23, 1, 6, 59];
