@@ -1,0 +1,187 @@
+.studentFeedback-page {
+    font-size: 1.3rem;
+    overflow-x: hidden;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". inputForm ."
+
+        /* 2nd row */
+        ". popup-overlay ."
+    ;
+    text-align: center;
+    align-items: center;
+}
+
+/* previously inputForm-fieldset */
+.inputForm {
+    grid-area: inputForm;
+    display: grid;
+    grid-template-columns: 0.1fr repeat(2, 0.5fr) 0.1fr;
+    grid-template-rows: 0.1fr repeat(9, 0.5fr) 0.1fr;
+    grid-template-areas:
+        /* 1st row */
+        ". . . ."
+
+        /* 2nd row */
+        ". main-heading main-heading ."
+
+        /* 3rd row */
+        ". gender-radio-label gender-radio-input ."
+
+        /* 4th row */
+        ". completedCourse-label completedCourse-input ."
+
+        /* 5th row */
+        ". semester-label semester-input ."
+
+        /* 6th row */
+        ". teachingQuality-label teachingQuality-input ."
+
+        /* 7th row */
+        ". teachingMethod-label teachingMethod-input ."
+
+        /* 8th row */
+        ". learningExperience-label learningExperience-textarea ."
+
+        /* 9th row */
+        ". rating-label rating-select ."
+
+        /* 10th row */
+        ". submitted submitted ."
+
+        /* 11th row */
+        ". . . ."
+    ;
+    gap: 0.5rem;
+}
+
+.main-heading {
+    grid-area: main-heading;
+    text-align: center;
+}
+
+/* Gender complete start */
+.gender-radio-label {
+    grid-area: gender-radio-label;
+}
+
+.gender-radio-input {
+    grid-area: gender-radio-input;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        /* 1st row */
+        "gender-radio-input-1 gender-radio-input-2"
+    ;
+}
+
+.gender-radio-input-1 {
+    grid-area: gender-radio-input-1;
+}
+
+.gender-radio-input-2 {
+    grid-area: gender-radio-input-2;
+}
+
+/* Gender complete end */
+
+/* Course completed start */
+.completedCourse-label {
+    grid-area: completedCourse-label;
+}
+
+.completedCourse-input {
+    grid-area: completedCourse-input;
+}
+
+/* Course completed end */
+
+.semester-label {
+    grid-area: semester-label;
+}
+
+.semester-input {
+    grid-area: semester-input;
+}
+
+.teachingQuality-label {
+    grid-area: teachingQuality-label;
+}
+
+.teachingQuality-input {
+    grid-area: teachingQuality-input;
+}
+
+.teachingMethod-label {
+    grid-area: teachingMethod-label;
+}
+
+.teachingMethod-input {
+    grid-area: teachingMethod-input;
+}
+
+.learningExperience-label {
+    grid-area: learningExperience-label;
+}
+
+.learningExperience-textarea {
+    grid-area: learningExperience-textarea;
+    margin: 2rem 0;
+}
+
+.rating-label {
+    grid-area: rating-label;
+}
+
+.rating-select {
+    grid-area: rating-select;
+}
+
+.submitted {
+    grid-area: submitted;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas:
+        /* 1st row */
+        ". submitted-button ."
+    ;
+}
+
+.submitted-button{
+    grid-area: submitted-button;
+    background-color: skyblue;
+    padding: 0.5rem 3rem;
+}
+
+.submitted-button:hover{
+    border: 7px outset blue;
+}
+
+.popup-overlay{
+    grid-area: popup-overlay;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas:
+        /* 1st row */
+        ". popup-content ."
+    ;
+}
+
+.popup-content{
+    grid-area: popup-content;
+    background-color: lightgray;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.popup-content-close-button{
+    background-color: red;
+    padding: 0.5rem 3rem;
+    margin-top: 0.5rem;
+    border-radius: 2rem;
+}
