@@ -7,13 +7,14 @@
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-areas: 
         /* 1st row */
-        ". inputForm ."
-
-        /* 2nd row */
         ". popup-overlay ."
+        
+        /* 2nd row */
+        ". inputForm ."
     ;
     text-align: center;
     align-items: center;
+    background: url(/gradient/grabient-light-blue-to-light-green.png) center/cover no-repeat;
 }
 
 /* previously inputForm-fieldset */
@@ -57,6 +58,18 @@
         ". . . ."
     ;
     gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input, select, textarea{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.gender-radio-label, .gender-radio-input-1, .gender-radio-input-2, .completedCourse-label, .semester-label, .teachingQuality-label, .teachingMethod-label, .learningExperience-label, .rating-label{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2rem;
+    padding: 0.3rem 0rem;
+    letter-spacing: 0.1rem;
 }
 
 .main-heading {
@@ -153,12 +166,16 @@
 
 .submitted-button{
     grid-area: submitted-button;
-    background-color: skyblue;
+    background-color: #ff8f6c;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
     padding: 0.5rem 3rem;
 }
 
 .submitted-button:hover{
-    border: 7px outset blue;
+    border: 7px outset #cc7256;
+    cursor: pointer;
 }
 
 .popup-overlay{
@@ -173,7 +190,7 @@
 
 .popup-content{
     grid-area: popup-content;
-    background-color: lightgray;
+    background-color: white;
     padding: 2rem 0;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -184,4 +201,9 @@
     padding: 0.5rem 3rem;
     margin-top: 0.5rem;
     border-radius: 2rem;
+    color: white;
+}
+
+.popup-content-close-button:hover{
+    cursor: pointer;
 }

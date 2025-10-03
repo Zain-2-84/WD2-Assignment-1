@@ -1,0 +1,96 @@
+.movie-search-page{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.01fr 1fr 0.01fr;
+    grid-template-areas: 
+        /* 1st row */
+        ". . ."
+
+        /* 2nd row */
+        ". movie-search-everything ."
+
+        /* 3rd row */
+        ". . ."
+    ;
+    /* gap: 0; */
+}
+
+.movie-search-everything{
+    grid-area: movie-search-everything;
+    /* display: grid; */
+    margin: auto 0;
+    justify-self: center;
+}
+
+.movie-search-page-title{
+    font-size: 2rem;
+}
+
+input{
+    margin: 1rem;
+    background-color: white;
+}
+
+.movie-details{
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(4, 0.1fr);
+    grid-template-areas: 
+        /* 1st row */
+        "movie-imageAndTitle"
+
+         /* 2nd row */
+        "movie-rating"
+
+        /* 3rd row */
+        "movie-genre"
+
+        /* 4th row */
+        "movie-runtime"
+    ;
+    width: fit-content;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.movie-imageAndTitle{
+    grid-area: movie-imageAndTitle;
+    display: grid;
+    /* gap: 0rem; */
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        /* 1st row */
+        "movie-poster"
+
+        /* 2nd row */
+        "movie-title"
+    ;
+}
+
+.movie-poster{
+    grid-area: movie-poster;
+    margin-top: 1rem;
+    justify-self: center;
+    margin-top: 0px;
+}
+
+.movie-title{
+    grid-area: movie-title;
+    display: grid;
+    gap: 0rem;
+    margin-top: 0px;
+    background: url(../images/grabient-movie-title.png) center/cover no-repeat;
+}
+
+.movie-rating{
+    grid-area: movie-rating;
+}
+
+.movie-genre{
+    grid-area: movie-genre;
+}
+
+.movie-runtime{
+    grid-area: movie-runtime;
+}
